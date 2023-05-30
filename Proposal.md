@@ -22,20 +22,31 @@ AniQuotes is an app that takes your those anime quotes you love to repeat and te
 
 ### Routes and models
 
-- My routes will include ('/randomQuote', '/randomQuoteByTitle', '/randomQuoteByCharacter', '/allAnimeNames')
+- My routes will include:
+
+- GET/random-quote, POST/random-quote, PATCH/random-quote/:id, DELETE/random-quote/:id 
+
+- GET/random-quote/:title, POST/random-quote/:title
+
+- GET/random-quote/:character, POST/random-quote/:character
+
+- GET/animes, POST/animes
 
 - My models will be randomQuotes and animeNames 
 
 - My reference will be allAnimeNames and randomQuoteByTitle
 
+- I will be seeding my database by creating a random-quote.json and adding that to my data folder then importing that data into the seed.js then I'll export the data using fetch or axios and seed the data following the same format as the models to create new quotes
+
+- In the GET/random-quote query I will reference the anime-names model so that the quote will display exactly which anime is being pulled from once displayed.
 
 ### User Stories
 
-- As a user I should be able to query ('/randomQuote') to access a random quote in the api 
+- As a user I should be able to query ('/random-quote') to access a random quote in the api 
 
-- As a user I should be able to query ('/randomQuoteByTitle') to access a quote from a specified show. (One Piece, Bleach, etc..)
+- As a user I should be able to query ('/random-quote/:title') to access a quote from a specified show. (One Piece, Bleach, etc..)
 
-- As a user I should be able to query ('/randomQuoteByCharacter') to grab a random quote from the chacter specified (Luffy, Naruto)
+- As a user I should be able to query ('/randomQ-quote/:character') to grab a random quote from the chacter specified (Luffy, Naruto)
 
 ### MVP Goals 
 
